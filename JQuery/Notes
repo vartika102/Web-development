@@ -1,0 +1,64 @@
+jQuery Selectors:
+They allow to select and manipukate HTML element(s)
+$(selector).action()
+//$-selects nd accesses a query
+//selector- denotes the html element that needs to be manipulated
+//action()- denotes a jQuery action to be performed on the html element
+
+jQuery Methods:
+css()
+They set or return one or more style properties for the selected elements.
+Syntax:
+$(selector).css(propertyname);
+$(selector).css(propertyname, value);
+//Return content - It returns the content of the first matched element
+//Set content - it overwrites the content of all matched elements
+
+before()/after():
+$(selector).before(content);
+
+text()
+$(selector).text()
+$(li:first).text()//example returns Red
+$(selector).text(content)//replaces
+
+html()//similar to text() except that it returns the html tags as well
+
+attr()
+$(selector).attr(attribute)// returns value of first matched content
+$(selector).attr(attribute, value)
+$('img').attr('border', '5px solid black')//example
+
+val()//set or return values
+
+addClass()//adds one or more class to the selected element.
+$(selector).addClass(classname)
+toggleClass()//toggles between adding and removing classes.
+
+jQuery Events:
+
+click()
+$(selector).click(function)
+//example
+$('img').click(function(){
+	$(this).hide()//on clicking, hides the element that is clicked
+});
+
+on()//attaches one or mor event handlers for the selected element. Can be used along with click() or keypress()
+$(selector).on(event, function)
+off()//removes the attached event handlers
+
+keypress//keydown+keyup
+
+hide(speed, callback);
+show(speed, callback);
+toggle();
+fadeIn();
+fadeOut();//fades the element
+slideDown(speed, callback);
+slideUp(speed, callback);
+
+jQuery UI:
+draggable();
+droppable();
+datepicker();

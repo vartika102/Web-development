@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+
+	<h1>jQuery Tutorial</h1>
+	<p>By Edureka</p>
+	<p>Start typing...</p>
+	<input type="text" id="press" size="10">
+	<ul>
+		<li>Red <a href="google.com">Google</a></li>
+		<li>Yellow</li>
+		<li>Green</li>
+	</ul>
+	<div class="image">
+		<img src="app.png" height="100px" width="200px">
+	</div>
+	<input type="text" id="sometext" value="">
+	<button id="submit">Submit</button>
+	<div id="slide" style="height: 60px; width: 90px; display: none; background-color: pink;"></div>
+	<button id="slidebutton">Slide</button>
+
+	<style type="text/css">
+		.styleclass{
+			border: 3px solid red;
+		}
+	</style>
+
+	<script type="text/javascript">
+		let design={
+			color: 'blue',
+			background: 'green',
+			border: '3px solid black'
+		}
+	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			//function that executes only once the page is ready.
+			$('#submit').click(function(){
+				$('img').toggleClass("styleclass");//for toggling styleclass to add or remove border
+				alert('Value: '+ $('#sometext').val());//alert
+				$('h1').css(design);//adds the css into the element
+			});
+
+			$('#press').on("keypress", function(){
+				$("p:last").hide();
+			});
+			
+			$('#slidebutton').on('click', function(){
+				$("#slide").slideDown('slow');
+			});
+		});
+	</script>
+	
+</body>
+</html>
