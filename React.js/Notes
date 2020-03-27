@@ -1,0 +1,69 @@
+- Open Source JS frontend library developed by facebook, used to develop Interactive UIs.
+-DOM is an object that is created by the browser each time the webpage is loaded. It can dynamically add or remove elements from the webpage at the backend.
+-In react the entire application is divided into various components. Each time data is manipulated, only that particular component is updated without reloading the entire page. React UI is a Virtual DOM and not Real.
+-Blew the previous view, update and then place the new view in place of the old one. This was possible bcoz React doesn't have any data binding. We only have a render function which gets called once for each component which returns a representation of our view.
+
+aspects:
+-Virtual DOM
+-One way Data Binding
+-Serverside Rendering - pre render teh initial state of react component at the server side only to make page loading faster. Server response to th ebrowser is the HTML page that is ready to be rendered.
+
+Installation:
+-Add React.js dependencies to the code directly through online repositories using <script src="dependencies"></script> tag OR
+-Download them and add to project folder.
+
+//Components:
+-A valid react component, accepts a single 'props' object argument to produce a React element.
+-They are called 'functional' as they literally are javascript functions.
+-Simplest way of defining a component is through javascript.
+	e.g.:
+	function PropDemo(props){
+		return <h1> Hello...{props.name}</h1>
+	}
+-Two forms of components:
+1. Stateful - Remembers everything it does
+2. Stateless - Doesn't remember anything it does
+
+//Props:
+-Similar to html attributes
+-props are read-only components
+-Whether components are declared as function or class, it must never change its props.
+-Such components are called 'pure functions'.
+e.g.:
+function sum(x, y){
+	return x+y;
+} // its prop is to return the sum, whcih never changes.
+
+//States:
+-Heart/Core of react components
+-Must be kept as simple as possible
+-Determine the components' rendering and behavior
+-Creates dynamic and interactive components
+
+LIFECYCLE (inorder):
+//Initial Phase:
+Methods used
+-getDefaultProps() //specifies the default value of this.props //before component creation
+-getInitialState() //specifies initial value of this.state //before component creation
+-componentWillMount()
+-render() //manditory // returns a single html node with multiple child nodes.
+-componentDidMount()
+
+//Updating Phase: //when state change occurs
+Methods used
+-shouldComponentUpdate()
+-componentWillUpdate()
+-render()
+-componentDidUpdate()
+
+//Props Change Phase: //component updates only when the prop changes
+-componentWillRecieveProps()
+-shouldComponentUpdate()
+-componentWillUpdate()
+-render()
+-componentDidUpdate()
+
+//Unmounting Phase: //component is destroyed and removed from the DOM
+-componentWillUnmount()
+
+REFERENCES
